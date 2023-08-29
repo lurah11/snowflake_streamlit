@@ -29,8 +29,8 @@ streamlit.dataframe(filtered)
 #new section to display the fruiyvice response 
 
 fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
-# streamlit.write('The user entered ', fruit_choice)
+streamlit.write('The user entered ', fruit_choice)
 
-# resp = requests.get('https://fruityvice.com/api/fruit/'+fruit_choice)
-# streamlit.text(resp)
-# streamlit.text(resp.json())
+resp = requests.get('https://fruityvice.com/api/fruit/'+fruit_choice)
+streamlit.text(resp)
+streamlit.text(resp.json())
