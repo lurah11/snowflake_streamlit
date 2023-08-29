@@ -1,5 +1,6 @@
 import streamlit 
 import pandas as pd
+import requests
 
 streamlit.title("My Parents New Healthy Diner")
 
@@ -24,3 +25,8 @@ filtered = my_fruit_list.loc[fruit_filter]
 #display the table 
 
 streamlit.dataframe(filtered)
+
+#new section to display the fruiyvice response 
+resp = requests.get('https://fruityvice.com/api/fruit/watermelon')
+streamlit.text(resp)
+streamlit.text(resp.json())
