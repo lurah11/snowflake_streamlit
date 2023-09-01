@@ -2,6 +2,7 @@ import streamlit
 import pandas as pd
 import requests
 import snowflake.connector
+from urllib.error URLError
 
 streamlit.title("My Parents New Healthy Diner")
 
@@ -42,7 +43,7 @@ try :
     streamlit.error('Please select a fruit to get the information.')
   else : 
     df_fruit = get_fruityvice_data(fruit_choice)
-    streamlit.dataframe(df_normalized)
+    streamlit.dataframe(df_fruit)
 except URLError as e:
   streamlit.error()
     
