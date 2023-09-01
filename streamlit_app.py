@@ -33,7 +33,7 @@ streamlit.dataframe(filtered)
 def get_fruityvice_data(fruit_choice):
     resp = requests.get('https://fruityvice.com/api/fruit/'+fruit_choice)
     df_normalized = pd.json_normalize(resp.json())
-    return df_normalizerd
+    return df_normalized
     
     
 
