@@ -66,7 +66,6 @@ if streamlit.button('Get fruit lists'):
     streamlit.text(f"the fruit load list contains : ")
     streamlit.dataframe(my_data_rows)
 
-streamlit.stop()
 
 #add input filed 
 
