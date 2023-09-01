@@ -42,9 +42,6 @@ except URLError as e:
     
 
 
-streamlit.text(resp)
-streamlit.text(resp.json())
-
 #snowflake 
 
 streamlit.header("Snowflake part")
