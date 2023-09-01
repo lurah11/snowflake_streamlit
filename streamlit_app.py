@@ -35,3 +35,12 @@ streamlit.write('The user entered ', fruit_choice)
 resp = requests.get('https://fruityvice.com/api/fruit/'+fruit_choice)
 streamlit.text(resp)
 streamlit.text(resp.json())
+
+#snowflake 
+
+streamlit.header("Snowflake part")
+my_cnx = snowflake.connector.connect(**streamlit.secret['snowflake'])
+my_cur = my_cnx.cursor()
+my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
+my_data_row = my_cur.fetchone()
+streamlit.text(f"hello from ------ {my_data_row}")
